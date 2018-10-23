@@ -1,6 +1,7 @@
 # Lord Codes Samples 💻️
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://github.com/lordcodes/lordcodes.github.io/blob/master/LICENSE)
+[![@lordcodes](https://img.shields.io/badge/contact-@lordcodes-blue.svg?style=flat)](https://twitter.com/lordcodes)
 
 Here is a collection of all the code samples I have created to support my blog articles
 
@@ -10,4 +11,4 @@ If you have any questions, thoughts or feedback on my articles or code samples, 
 
 ## Author
 
-Andrew Lord [@andrewlord1990](https://twitter.com/@andrewlord1990)
+Andrew Lord [@lordcodes](https://twitter.com/@lordcodes)
