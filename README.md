@@ -16,3 +16,7 @@ If you notice any typing mistakes or errors in the code samples, then please fee
 ## Author
 
 Andrew Lord [@lordcodes](https://twitter.com/@lordcodes)
+
+## License
+
+Lord Codes Samples are released under the Apache 2.0 license. See [LICENSE](https://github.com/andrewlord1990/lordcodes-samples/blob/master/LICENSE) for details.
