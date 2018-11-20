@@ -1,6 +1,6 @@
 # Lord Codes Samples 💻️
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://github.com/lordcodes/lordcodes.github.io/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://github.com/lordcodes/lordcodes-samples/blob/master/LICENSE)
 [![@lordcodes](https://img.shields.io/badge/contact-@lordcodes-blue.svg?style=flat)](https://twitter.com/lordcodes)
 
 I love writing code and sharing what I find online through my blog, [Lordcodes](https://www.lordcodes.com). Here I will add the code samples that are created to support the blog articles.
@@ -16,7 +16,3 @@ If you notice any typing mistakes or errors in the code samples, then please fee
 ## Author
 
 Andrew Lord [@lordcodes](https://twitter.com/@lordcodes)
-
-## License
-
-Lord Codes Samples are released under the Apache 2.0 license. See [LICENSE](https://github.com/andrewlord1990/lordcodes-samples/blob/master/LICENSE) for details.
