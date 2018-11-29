@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://github.com/lordcodes/lordcodes-samples/blob/master/LICENSE)
 [![@lordcodes](https://img.shields.io/badge/contact-@lordcodes-blue.svg?style=flat)](https://twitter.com/lordcodes)
+[![Lord Codes Blog](https://img.shields.io/badge/blog-Lord%20Codes-yellow.svg?style=flat)](https://www.lordcodes.com)
 
 I love writing code and sharing what I find online through my blog, [Lordcodes](https://www.lordcodes.com). Here I will add the code samples that are created to support the blog articles.
 
