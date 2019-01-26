@@ -4,7 +4,7 @@
 [![@lordcodes](https://img.shields.io/badge/contact-@lordcodes-blue.svg?style=flat)](https://twitter.com/lordcodes)
 [![Lord Codes Blog](https://img.shields.io/badge/blog-Lord%20Codes-yellow.svg?style=flat)](https://www.lordcodes.com)
 
-I love writing code and sharing what I find online through my blog, [Lordcodes](https://www.lordcodes.com). Here I will add the code samples that are created to support the blog articles.
+I love writing code and sharing what I find online through my blog, [Lord Codes](https://www.lordcodes.com). Here I will add the code samples that are created to support the blog articles.
 
 If you like what I am sharing, please don't hesitate to follow me [on Twitter](https://twitter.com/lordcodes) and subscribe to my [blog feed](https://www.lordcodes.com) if you are interested.
 
