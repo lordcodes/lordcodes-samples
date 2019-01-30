@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lordcodes.lazyviewbindingarticle">
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="Lazy View Binding Article"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:allowBackup="false">
+
+        <activity android:name=".butterknife.PlanningActivity" />
+        <activity android:name=".findviewbyid.PlanningActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".kotlinandroidextensions.PlanningActivity" />
+        <activity android:name=".lazy.PlanningActivity" />
+    </application>
+</manifest>
