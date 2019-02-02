@@ -17,14 +17,9 @@ fun <ViewT : View> Fragment.bindView(@IdRes idRes: Int): FragmentBinder<ViewT> {
 
 interface FragmentBinder<out ViewT> {
     val value: ViewT
-
-    fun isInitialized(): Boolean
 }
 
-inline operator fun <ViewT> FragmentBinder<ViewT>.getValue(
-    thisRef: Any?,
-    property: KProperty<*>
-): ViewT = value
+inline operator fun <ViewT> FragmentBinder<ViewT>.getValue(thisRef: Any?, property: KProperty<*>): ViewT = value
 
 internal object UNINITIALIZED_VALUE
 
@@ -34,8 +29,7 @@ private class FragmentViewBinder<out ViewT : View>(
 ) : FragmentBinder<ViewT>,
     LifecycleObserver {
 
-    private var viewValue: Any? =
-        UNINITIALIZED_VALUE
+    private var viewValue: Any? = UNINITIALIZED_VALUE
 
     init {
         fragment.viewLifecycleOwnerLiveData.observe(fragment, Observer {
@@ -56,13 +50,4 @@ private class FragmentViewBinder<out ViewT : View>(
     fun onViewDestroyed() {
         viewValue = UNINITIALIZED_VALUE
     }
-
-    override fun isInitialized(): Boolean = viewValue !== UNINITIALIZED_VALUE
-
-    override fun toString(): String =
-        if (isInitialized()) {
-            value.toString()
-        } else {
-            "Lazy value not initialized yet."
-        }
 }
