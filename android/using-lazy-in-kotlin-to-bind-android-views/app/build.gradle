@@ -16,6 +16,11 @@ android {
     sourceSets {
         main.java.srcDirs += "src/main/kotlin"
     }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -24,4 +29,6 @@ dependencies {
 
     implementation 'com.jakewharton:butterknife:10.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
 }

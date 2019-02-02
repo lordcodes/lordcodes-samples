@@ -6,16 +6,20 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Lazy View Binding Article"
         tools:ignore="GoogleAppIndexingWarning"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:allowBackup="false">
 
-        <activity android:name=".butterknife.PlanningActivity" />
-        <activity android:name=".findviewbyid.PlanningActivity">
+        <activity android:name=".LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".butterknife.PlanningActivity" />
+        <activity android:name=".findviewbyid.PlanningActivity"/>
         <activity android:name=".kotlinandroidextensions.PlanningActivity" />
         <activity android:name=".lazy.PlanningActivity" />
+        <activity android:name=".lazyfragment.PlanningFragmentActivity" />
     </application>
 </manifest>
