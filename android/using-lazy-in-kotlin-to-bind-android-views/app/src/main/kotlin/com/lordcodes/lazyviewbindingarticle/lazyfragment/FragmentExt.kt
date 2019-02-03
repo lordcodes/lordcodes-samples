@@ -7,29 +7,21 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.Observer
 import androidx.lifecycle.OnLifecycleEvent
+import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
-fun <ViewT : View> Fragment.bindView(@IdRes idRes: Int): FragmentBinder<ViewT> {
-    return FragmentViewBinder(this) {
+fun <ViewT : View> Fragment.bindView(@IdRes idRes: Int): ReadOnlyProperty<Fragment, ViewT> {
+    return FragmentBinder(this) {
         it.view!!.findViewById<ViewT>(idRes)
     }
 }
 
-interface FragmentBinder<out ViewT> {
-    val value: ViewT
-}
-
-inline operator fun <ViewT> FragmentBinder<ViewT>.getValue(thisRef: Any?, property: KProperty<*>): ViewT = value
-
-internal object UNINITIALIZED_VALUE
-
-private class FragmentViewBinder<out ViewT : View>(
+private class FragmentBinder<out ViewT : View>(
     val fragment: Fragment,
     val initializer: (Fragment) -> ViewT
-) : FragmentBinder<ViewT>,
-    LifecycleObserver {
-
-    private var viewValue: Any? = UNINITIALIZED_VALUE
+) : ReadOnlyProperty<Fragment, ViewT>, LifecycleObserver {
+    private object EMPTY
+    private var viewValue: Any? = EMPTY
 
     init {
         fragment.viewLifecycleOwnerLiveData.observe(fragment, Observer {
@@ -37,17 +29,16 @@ private class FragmentViewBinder<out ViewT : View>(
         })
     }
 
-    override val value: ViewT
-        get() {
-            if (viewValue === UNINITIALIZED_VALUE) {
-                viewValue = initializer(fragment)
-            }
-            @Suppress("UNCHECKED_CAST")
-            return viewValue as ViewT
+    override fun getValue(thisRef: Fragment, property: KProperty<*>): ViewT {
+        if (viewValue === EMPTY) {
+            viewValue = initializer(fragment)
         }
+        @Suppress("UNCHECKED_CAST")
+        return viewValue as ViewT
+    }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun onViewDestroyed() {
-        viewValue = UNINITIALIZED_VALUE
+        viewValue = EMPTY
     }
 }
