@@ -1,3 +1,6 @@
+/// Copy and paste the contents of this file into a scratch file in Android Studio or IntelliJ to try it out.
+
+
 import java.util.UUID
 
 // General types
