@@ -21,6 +21,9 @@ data class Identifier<EntityT, RawT>(
     val rawValue: RawT
 )
 
+val Identifier<*, UUID>.uuidString: String
+    get() = rawValue.toString()
+
 typealias RoomId = Identifier<Room, UUID>
 data class Room(val id: RoomId)
 
@@ -34,3 +37,10 @@ fun bookMeeting(id: MeetingId) {}
 
 //bookMeeting(room.id)
 bookMeeting(meeting.id)
+
+
+// Alternatives
+
+data class MessageId(val raw: UUID)
+data class ChatId(val raw: String)
+data class PersonId(val raw: Long)
